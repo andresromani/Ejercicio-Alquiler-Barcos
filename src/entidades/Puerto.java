@@ -28,14 +28,12 @@ public class Puerto {
     }
     
     public Alquiler calcularMayorAlquiler() {
-        alquileres.forEach(a -> a.calcularAlquiler());
         Collections.sort(alquileres, new ComparatorCostoAlquiler());
         
         return alquileres.get(alquileres.size() - 1);
     }
     
     public Alquiler calcularMenorAlquiler() {
-        alquileres.forEach(a -> a.calcularAlquiler());
         Collections.sort(alquileres, new ComparatorCostoAlquiler());
         
         return alquileres.get(0);

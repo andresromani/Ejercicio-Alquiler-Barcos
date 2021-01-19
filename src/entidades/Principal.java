@@ -28,6 +28,9 @@ public class Principal {
         puerto.agregarAlquiler(a4);
         puerto.agregarAlquiler(a5);
         
+        // Calcular costo de todos los alquileres
+        alquileres.forEach(a -> a.calcularAlquiler());
+        
         DecimalFormat df = new DecimalFormat("#.00");
         System.out.println("El mayor alquiler es: $" + df.format(puerto.calcularMayorAlquiler().getCosto()));
         System.out.println("El menor alquiler es: $" + df.format(puerto.calcularMenorAlquiler().getCosto()));
