@@ -33,7 +33,7 @@ public class Principal {
         System.out.println("El menor alquiler es: $" + df.format(puerto.calcularMenorAlquiler().getCosto()));
         System.out.println("El promedio mensual es: $" + df.format(puerto.calcularPromedioMensual()));
         System.out.println("El promedio anual es: $" + df.format(puerto.calcularPromedioAnual()));
-        
+        List<Integer> list = new ArrayList<>();
         // Mostrar todos los alquileres
 //        System.out.println("");
 //        System.out.println(puerto);

@@ -28,12 +28,14 @@ public class Puerto {
     }
     
     public Alquiler calcularMayorAlquiler() {
+        alquileres.forEach(a -> a.calcularAlquiler());
         Collections.sort(alquileres, new ComparatorCostoAlquiler());
         
         return alquileres.get(alquileres.size() - 1);
     }
     
     public Alquiler calcularMenorAlquiler() {
+        alquileres.forEach(a -> a.calcularAlquiler());
         Collections.sort(alquileres, new ComparatorCostoAlquiler());
         
         return alquileres.get(0);
@@ -45,7 +47,7 @@ public class Puerto {
         double sumaAlquileres = 0;
         
         for (Alquiler alquiler : alquileres) {
-            if (alquiler.getFinAlquiler().getMonthValue() == mesActual) {
+            if (alquiler.getInicioAlquiler().getMonthValue() == mesActual) {
                 contadorAlquileres++;
                 sumaAlquileres += alquiler.getCosto();
             }
@@ -60,7 +62,7 @@ public class Puerto {
         double sumaAlquileres = 0;
         
         for (Alquiler alquiler : alquileres) {
-            if (alquiler.getFinAlquiler().getYear() == anioActual) {
+            if (alquiler.getInicioAlquiler().getYear() == anioActual) {
                 contadorAlquileres++;
                 sumaAlquileres += alquiler.getCosto();
             }

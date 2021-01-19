@@ -24,7 +24,6 @@ public class Alquiler {
         this.finAlquiler = LocalDate.parse(finAlquiler, DateTimeFormatter.ofPattern("dd-MM-yyyy"));
         this.barco = barco;
         this.posicionAmarre = posicionAmarre;
-        this.calcularAlquiler();
     }
 
     public String getNombre() {
